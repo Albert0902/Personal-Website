@@ -1,0 +1,72 @@
+/* ========== 全局重置 ========== */
+* { margin:0; padding:0; box-sizing: border-box; }
+
+/* ========== 自定义字体 ========== */
+@font-face {
+    font-family: "kuzhu";
+    src: url(../fonts/酷站快乐体.ttf);
+}
+
+@font-face {
+    font-family: "simkai";
+    src: url(../fonts/simkai.ttf);
+}
+
+@font-face {
+    font-family: "pacifico";
+    src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+/* ========== 页面主体 ========== */
+body {
+    background-color: #000C20;
+    background-image:
+        linear-gradient(rgba(65, 209, 255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(65, 209, 255,0.04) 1px, transparent 1px);
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: repeat;
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+    line-height:1.4;
+    padding: 72px 40px 40px;
+}
+
+/* ========== 字体类（共用） ========== */
+.font_kuzhu    { font-family: kuzhu; }
+.font_simkai   { font-family: simkai; }
+.font_pacifico { font-family: pacifico; }
+
+/* ========== 文字颜色类（共用） ========== */
+.text_purple { color: #747bff; }
+.text_cyan   { color: #70ffcd; }
+.text_blue   { color: #38bdf8; }
+.text_white  { color: #ffffff; }
+
+/* ========== 发光特效类（共用） ========== */
+.glow_purple { text-shadow: 0 0 20px #747bff; }
+.glow_cyan   { text-shadow: 0 0 20px #70ffcd; }
+.glow_blue   { text-shadow: 0 0 20px #38bdf8; }
+
+/* ========== 背景圆点 ========== */
+.dots_container {
+    position: fixed;
+    top: 0; left:0;
+    width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg_dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    opacity:0.7;
+    pointer-events: none;
+}

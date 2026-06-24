@@ -1,0 +1,79 @@
+/* ========== 时间线页面 ========== */
+.main_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.timeline_title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.timeline_list {
+    list-style: none;
+    padding-left: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.timeline_list li {
+    position: relative;
+    padding: 15px 0 0 15px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.timeline_list li:first-child .timeline_dot {
+    background-color: #aaffcd;
+}
+
+.timeline_dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #fff;
+    position: absolute;
+    left: -6px;
+    top: 22px;
+    transform: translateY(-50%);
+}
+
+.timeline_text {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-10px);
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.timeline_text div:last-child {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 4px;
+}
+
+.timeline_icons {
+    position: absolute;
+    left: -110px;
+    top: 4px;
+    display: flex;
+    gap: 6px;
+}
+
+.timeline_icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+}
