@@ -1,5 +1,3 @@
-<center><h1>This is My Personal Website</h1></center>
-
 <p align="center">
     <b><a href="README.md">📖 English</a></b>  | 
     <b><a href="markdown/README-zh.md">📖 简体中文</a></b>  | 
@@ -12,7 +10,7 @@
 
 ## Information
 
-Website: https://albert-5e0.pages.dev/ *← Everything you need is in there*
+Website: https://albert-personal-website.pages.dev/html/ *← Everything you need is in there*
 
 ## License
 
