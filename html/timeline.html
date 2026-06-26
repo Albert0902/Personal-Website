@@ -42,9 +42,35 @@
                     </div>
                 </li>
             </ul>
+            <div class="timeline_title">网站更新记录</div>
+            <ul class="timeline_list">
+                <li class="update_card" onclick="openModal()">
+                    <div class="timeline_dot"></div>
+                    <div class="timeline_icons">
+                        <img class="timeline_icon" src="https://dash.cloudflare.com/apple-touch-icon-152x152.png">
+                        <img class="timeline_icon" src="https://github.githubassets.com/favicons/favicon.png">
+                    </div>
+                    <div class="timeline_text">
+                        <div>网站部署到Cloudflare并上传到GitHub</div>
+                        <div>2026.06.26</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 弹窗 -->
+    <div class="honor-popup" id="modal-overlay">
+        <div class="honor-popup-bg" onclick="closeModal()"></div>
+        <div class="honor-popup-content">
+            <img src="../static/img/update1.png" alt="">
+            <div class="honor-popup-btns">
+                <a class="honor-popup-btn" href="https://www.bilibili.com/video/BV1KC736sEFC/?spm_id_from=333.1387.0.0&vd_source=f2f747ffc04b0d8fc4320400a73c7ef7" target="_blank">前往B站</a>
+            </div>
         </div>
     </div>
 
     <script src="../static/js/dots.js"></script>
+    <script src="../static/js/timeline.js"></script>
 </body>
 </html>
