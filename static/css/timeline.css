@@ -56,6 +56,7 @@
     transform: translateY(-10px);
     font-size: 15px;
     font-weight: normal;
+    transition: transform 0.25s ease;
 }
 
 .timeline_text div:last-child {
@@ -76,4 +77,76 @@
     width: 45px;
     height: 45px;
     border-radius: 3px;
+}
+
+/* ========== 更新记录卡片悬停放大（仅文字） ========== */
+.update_card {
+    cursor: pointer;
+}
+
+.update_card:hover .timeline_text {
+    transform: translateY(-10px) scale(1.04);
+}
+
+/* ========== 弹窗（旧版风格） ========== */
+.honor-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.honor-popup.show {
+    display: flex;
+}
+
+.honor-popup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.honor-popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.honor-popup img {
+    max-width: 90%;
+    max-height: calc(100vh - 120px);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.honor-popup-btns {
+    display: flex;
+    margin-top: 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.honor-popup-btn {
+    display: inline-block;
+    padding: 8px 24px;
+    background: #00a1d6;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2 ease, transform 0.2 ease;
+}
+
+.honor-popup-btn:hover {
+    background: #008fc7;
+    transform: scale(1.05);
 }
