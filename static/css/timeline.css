@@ -143,10 +143,27 @@
     border-radius: 20px;
     font-size: 14px;
     text-decoration: none;
+    margin-right: 24px;
     transition: background 0.2 ease, transform 0.2 ease;
 }
 
 .honor-popup-btn:hover {
     background: #008fc7;
+    transform: scale(1.05);
+}
+
+.honor-popup-btn-gh {
+    display: inline-block;
+    padding: 8px 24px;
+    background: #24292e;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2 ease, transform 0.2 ease;
+}
+
+.honor-popup-btn-gh:hover {
+    background: #444d56;
     transform: scale(1.05);
 }
