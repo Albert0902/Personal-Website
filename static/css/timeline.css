@@ -8,8 +8,9 @@
 .timeline_section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 40px;
+    max-width: 900px;
+    width: 100%;
 }
 
 .timeline_title {
