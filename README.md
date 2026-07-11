@@ -12,7 +12,7 @@
 
 ## Information
 
-Website: https://albert-personal-website.pages.dev/html/ *← Everything you need is in there*
+Website: https://albert-site.pages.dev/html/ *← Everything you need is in there*
 
 ## License
 
