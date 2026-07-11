@@ -3,12 +3,11 @@
     if (!container) return;
 
     const count = 300;
-    const size = 10;
+    const size = 5;
     const dots = [];
 
     for (let i = 0; i < count; i++) {
-        const dot = document.createElement('img');
-        dot.src = '../static/img/bgdot.png';
+        const dot = document.createElement('div');
         dot.className = 'bg_dot';
 
         const x = Math.random() * (window.innerWidth - size);
