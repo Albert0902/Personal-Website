@@ -64,9 +64,10 @@ body {
 
 .bg_dot {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    object-fit: contain;
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, #4AA9FF 0%, rgba(74, 169, 255, 0) 70%);
+    border-radius: 50%;
     opacity:0.7;
     pointer-events: none;
 }
