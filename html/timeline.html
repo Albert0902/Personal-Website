@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4秒的热水袋 - 时间线</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
+    <link rel="stylesheet" href="../static/css/root.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/timeline.css">
+</head>
+<body>
+    <!-- 顶部浮动玻璃标签栏 -->
+    <div class="tab_bar">
+        <div class="tab_left">
+            <img class="tab_avatar" src="../static/img/logo.png">
+            <span class="tab_name"><span class="font_pacifico">4</span><span class="font_simkai">秒的热水袋</span></span>
+        </div>
+        <div class="tab_center">
+            <a class="tab_item" href="index.html">首页</a>
+            <a class="tab_item active" href="#">时间线</a>
+        </div>
+        <div class="tab_right">
+            <img class="tab_qr" src="../static/img/二维码_64px.png" onclick="openQrPopup()">
+        </div>
+    </div>
+
+    <!-- 动态背景圆点 -->
+    <div id="dots-container" class="dots_container"></div>
+
+    <!-- 主内容 -->
+    <div class="main_content">
+        <div class="timeline_section">
+            <div class="timeline_title">荣誉</div>
+            <ul class="timeline_list">
+                <li>
+                    <div class="timeline_dot"></div>
+                    <div class="timeline_icons">
+                        <img class="timeline_icon" src="https://e.aice.org.cn/favicon.ico">
+                        <img class="timeline_icon" src="https://www.python.org/favicon.ico">
+                    </div>
+                    <div class="timeline_text">
+                        <div>AICE Python语言六级 合格</div>
+                        <div>2025.12.24</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="timeline_title">网站更新记录</div>
+            <ul class="timeline_list">
+                <li class="update_card" onclick="openModal()">
+                    <div class="timeline_dot"></div>
+                    <div class="timeline_icons">
+                        <img class="timeline_icon" src="https://dash.cloudflare.com/apple-touch-icon-152x152.png">
+                        <img class="timeline_icon" src="https://github.githubassets.com/favicons/favicon.png">
+                    </div>
+                    <div class="timeline_text">
+                        <div>网站部署到Cloudflare并上传到GitHub</div>
+                        <div>2026.06.26</div>
+                    </div>
+                </li>
+                <li class="update_card" onclick="openModal2()">
+                    <div class="timeline_dot"></div>
+                    <div class="timeline_text">
+                        <div>域名改为albert-site.pages.dev</div>
+                        <div>2026.06.28</div>
+                    </div>
+                </li>
+                <li class="update_card" onclick="openModal3()">
+                    <div class="timeline_dot"></div>
+                    <div class="timeline_text">
+                        <div>背景上的小点用代码代替</div>
+                        <div>2026.07.11</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 弹窗 -->
+    <div class="honor-popup" id="modal-overlay">
+        <div class="honor-popup-bg" onclick="closeModal()"></div>
+        <div class="honor-popup-content">
+            <img src="../static/img/update1.png" alt="">
+            <div class="honor-popup-btns">
+                <a class="honor-popup-btn" href="https://www.bilibili.com/video/BV1KC736sEFC/?spm_id_from=333.1387.0.0&vd_source=f2f747ffc04b0d8fc4320400a73c7ef7" target="_blank">前往B站</a>
+                <a class="honor-popup-btn-gh" href="https://github.com/Albert0902/Personal-Website" target="_blank">前往GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹窗2 -->
+    <div class="honor-popup" id="modal-overlay-2">
+        <div class="honor-popup-bg" onclick="closeModal2()"></div>
+        <div class="honor-popup-content">
+            <img src="../static/img/update2.png" alt="">
+            <div class="honor-popup-btns">
+                <a class="honor-popup-btn" href="https://www.bilibili.com/video/BV1fPTT6MEwM/?pop_share=1&spm_id_from=333.40164.0.0&vd_source=f2f747ffc04b0d8fc4320400a73c7ef7" target="_blank">前往B站</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 弹窗3 -->
+    <div class="honor-popup" id="modal-overlay-3">
+        <div class="honor-popup-bg" onclick="closeModal3()"></div>
+        <div class="honor-popup-content">
+            <img src="../static/img/update3.png" alt="">
+            <div class="honor-popup-btns">
+                <a class="honor-popup-btn" href="https://www.bilibili.com/video/BV1MkNx6MEUe/?pop_share=1&spm_id_from=333.40164.0.0&vd_source=f2f747ffc04b0d8fc4320400a73c7ef7" target="_blank">前往B站</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 二维码弹窗 -->
+    <div class="qr_popup" id="qr-popup">
+        <div class="qr_popup_bg" onclick="closeQrPopup()"></div>
+        <div class="qr_popup_content">
+            <img src="../static/img/二维码.png" alt="">
+        </div>
+    </div>
+
+    <script src="../static/js/dots.js"></script>
+    <script src="../static/js/timeline.js"></script>
+    <script src="../static/js/qr.js"></script>
+</body>
+</html>
