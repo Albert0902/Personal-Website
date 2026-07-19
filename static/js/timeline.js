@@ -21,3 +21,11 @@ function openModal3() {
 function closeModal3() {
     document.getElementById('modal-overlay-3').classList.remove('show');
 }
+
+function openModal4() {
+    document.getElementById('modal-overlay-4').classList.add('show');
+}
+
+function closeModal4() {
+    document.getElementById('modal-overlay-4').classList.remove('show');
+}
