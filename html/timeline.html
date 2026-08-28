@@ -47,7 +47,7 @@
             </ul>
             <div class="timeline_title">网站更新记录</div>
             <ul class="timeline_list">
-                <li class="update_card" onclick="openModal()">
+                <li class="update_card" onclick="openPopup('modal-overlay')">
                     <div class="timeline_dot"></div>
                     <div class="timeline_icons">
                         <img class="timeline_icon" src="https://dash.cloudflare.com/apple-touch-icon-152x152.png">
@@ -58,22 +58,21 @@
                         <div>2026.06.26</div>
                     </div>
                 </li>
-                <li class="update_card" onclick="openModal2()">
+                <li class="update_card" onclick="openPopup('modal-overlay-2')">
                     <div class="timeline_dot"></div>
+                    <div class="timeline_icons icon_right">
+                        <img class="timeline_icon" src="https://dash.cloudflare.com/apple-touch-icon-152x152.png">
+                    </div>
                     <div class="timeline_text">
                         <div>域名改为albert-site.pages.dev</div>
                         <div>2026.06.28</div>
                     </div>
                 </li>
-                <li class="update_card" onclick="openModal3()">
+                <li class="update_card" onclick="openPopup('modal-overlay-4')">
                     <div class="timeline_dot"></div>
-                    <div class="timeline_text">
-                        <div>背景上的小点用代码代替</div>
-                        <div>2026.07.11</div>
+                    <div class="timeline_icons icon_right">
+                        <img class="timeline_icon" src="../static/img/二维码_64px.png">
                     </div>
-                </li>
-                <li class="update_card" onclick="openModal4()">
-                    <div class="timeline_dot"></div>
                     <div class="timeline_text">
                         <div>添加二维码</div>
                         <div>2026.07.19</div>
@@ -85,7 +84,7 @@
 
     <!-- 弹窗 -->
     <div class="honor-popup" id="modal-overlay">
-        <div class="honor-popup-bg" onclick="closeModal()"></div>
+        <div class="honor-popup-bg" onclick="closePopup('modal-overlay')"></div>
         <div class="honor-popup-content">
             <img src="../static/img/update1.png" alt="">
             <div class="honor-popup-btns">
@@ -97,7 +96,7 @@
 
     <!-- 弹窗2 -->
     <div class="honor-popup" id="modal-overlay-2">
-        <div class="honor-popup-bg" onclick="closeModal2()"></div>
+        <div class="honor-popup-bg" onclick="closePopup('modal-overlay-2')"></div>
         <div class="honor-popup-content">
             <img src="../static/img/update2.png" alt="">
             <div class="honor-popup-btns">
@@ -106,20 +105,9 @@
         </div>
     </div>
 
-    <!-- 弹窗3 -->
-    <div class="honor-popup" id="modal-overlay-3">
-        <div class="honor-popup-bg" onclick="closeModal3()"></div>
-        <div class="honor-popup-content">
-            <img src="../static/img/update3.png" alt="">
-            <div class="honor-popup-btns">
-                <a class="honor-popup-btn" href="https://www.bilibili.com/video/BV1MkNx6MEUe/" target="_blank">前往B站</a>
-            </div>
-        </div>
-    </div>
-
     <!-- 弹窗4 -->
     <div class="honor-popup" id="modal-overlay-4">
-        <div class="honor-popup-bg" onclick="closeModal4()"></div>
+        <div class="honor-popup-bg" onclick="closePopup('modal-overlay-4')"></div>
         <div class="honor-popup-content">
             <img src="../static/img/update4.png" alt="">
             <div class="honor-popup-btns">
