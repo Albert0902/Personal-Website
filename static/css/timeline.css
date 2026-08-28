@@ -74,6 +74,10 @@
     gap: 6px;
 }
 
+.timeline_icons.icon_right {
+    left: -60px;
+}
+
 .timeline_icon {
     width: 45px;
     height: 45px;
@@ -145,7 +149,7 @@
     font-size: 14px;
     text-decoration: none;
     margin-right: 24px;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2 ease, transform 0.2 ease;
 }
 
 .honor-popup-btn:hover {
@@ -161,7 +165,7 @@
     border-radius: 20px;
     font-size: 14px;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2 ease, transform 0.2 ease;
 }
 
 .honor-popup-btn-gh:hover {
