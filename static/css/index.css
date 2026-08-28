@@ -174,8 +174,8 @@
 /* ========== 右上角大头像 ========== */
 .main_avatar {
     position: fixed;
-    top: 60px;
-    right: 20px;
+    top: 110px;
+    right: 70px;
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -268,7 +268,7 @@
     width: 220px;
     text-decoration: none;
     color: #ffffff;
-    transition: transform 0.2s ease, background 0.2s ease;
+    transition: transform 0.2 ease, background 0.2 ease;
 }
 
 .card_item:hover {
@@ -304,7 +304,7 @@
 .card_right svg {
     width: 36px;
     height: 36px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3 ease;
 }
 
 .card_item:hover .card_right img,
