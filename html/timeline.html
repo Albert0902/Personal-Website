@@ -14,14 +14,18 @@
     <div class="tab_bar">
         <div class="tab_left">
             <img class="tab_avatar" src="../static/img/logo.png">
-            <span class="tab_name"><span class="font_pacifico">4</span><span class="font_simkai">秒的热水袋</span></span>
+            <span class="tab_name">4秒的热水袋</span>
         </div>
         <div class="tab_center">
             <a class="tab_item" href="index.html">首页</a>
             <a class="tab_item active" href="#">时间线</a>
         </div>
         <div class="tab_right">
-            <img class="tab_qr" src="../static/img/二维码.png" onclick="openQrPopup()">
+            <a class="tab_github" href="https://github.com/Albert0902/Personal-Website" target="_blank" rel="noopener noreferrer">
+                <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub">
+                <span class="github_name">GitHub</span>
+            </a>
+            <img class="tab_qr" src="../static/img/qr_logo.png" onclick="openPopup('qr-popup')">
         </div>
     </div>
 
@@ -50,8 +54,8 @@
                 <li class="update_card" onclick="openPopup('modal-overlay')">
                     <div class="timeline_dot"></div>
                     <div class="timeline_icons">
-                        <img class="timeline_icon" src="https://dash.cloudflare.com/apple-touch-icon-152x152.png">
-                        <img class="timeline_icon" src="https://github.githubassets.com/favicons/favicon.png">
+                        <img class="timeline_icon" src="https://dash.cloudflare.com/favicon.ico">
+                        <img class="timeline_icon gh_invert" src="https://github.githubassets.com/favicons/favicon.svg">
                     </div>
                     <div class="timeline_text">
                         <div>网站部署到Cloudflare并上传到GitHub</div>
@@ -61,7 +65,7 @@
                 <li class="update_card" onclick="openPopup('modal-overlay-2')">
                     <div class="timeline_dot"></div>
                     <div class="timeline_icons icon_right">
-                        <img class="timeline_icon" src="https://dash.cloudflare.com/apple-touch-icon-152x152.png">
+                        <img class="timeline_icon" src="https://dash.cloudflare.com/favicon.ico">
                     </div>
                     <div class="timeline_text">
                         <div>域名改为albert-site.pages.dev</div>
@@ -71,7 +75,7 @@
                 <li class="update_card" onclick="openPopup('modal-overlay-3')">
                     <div class="timeline_dot"></div>
                     <div class="timeline_icons icon_right">
-                        <img class="timeline_icon" src="../static/img/二维码.png">
+                        <img class="timeline_icon" src="../static/img/qr_logo.png">
                     </div>
                     <div class="timeline_text">
                         <div>添加二维码</div>
@@ -81,11 +85,18 @@
                 <li class="update_card" onclick="openPopup('modal-overlay-4')">
                     <div class="timeline_dot"></div>
                     <div class="timeline_icons icon_right">
-                        <img class="timeline_icon" src="../static/img/二维码.png">
+                        <img class="timeline_icon" src="../static/img/qr_logo.png">
                     </div>
                     <div class="timeline_text">
                         <div>更改二维码</div>
                         <div>2026.09.05</div>
+                    </div>
+                </li>
+                <li class="update_card" onclick="openPopup('modal-overlay-5')">
+                    <div class="timeline_dot"></div>
+                    <div class="timeline_text">
+                        <div>优化并更新</div>
+                        <div>2026.11.21</div>
                     </div>
                 </li>
             </ul>
@@ -96,7 +107,7 @@
     <div class="honor-popup" id="modal-overlay">
         <div class="honor-popup-bg" onclick="closePopup('modal-overlay')"></div>
         <div class="honor-popup-content">
-            <img src="../static/img/update1.png" alt="">
+            <div class="honor-popup-frame"><img src="../static/img/update1.png" alt=""></div>
             <div class="honor-popup-btns">
                 <a class="honor-popup-btn" href="https://www.bilibili.com/video/BV1KC736sEFC/" target="_blank">前往B站</a>
                 <a class="honor-popup-btn-gh" href="https://github.com/Albert0902/Personal-Website" target="_blank">前往GitHub</a>
@@ -108,7 +119,7 @@
     <div class="honor-popup" id="modal-overlay-2">
         <div class="honor-popup-bg" onclick="closePopup('modal-overlay-2')"></div>
         <div class="honor-popup-content">
-            <img src="../static/img/update2.png" alt="">
+            <div class="honor-popup-frame"><img src="../static/img/update2.png" alt=""></div>
         </div>
     </div>
 
@@ -116,7 +127,7 @@
     <div class="honor-popup" id="modal-overlay-3">
         <div class="honor-popup-bg" onclick="closePopup('modal-overlay-3')"></div>
         <div class="honor-popup-content">
-            <img src="../static/img/update3.png" alt="">
+            <div class="honor-popup-frame"><img src="../static/img/update3.png" alt=""></div>
         </div>
     </div>
 
@@ -124,20 +135,27 @@
     <div class="honor-popup" id="modal-overlay-4">
         <div class="honor-popup-bg" onclick="closePopup('modal-overlay-4')"></div>
         <div class="honor-popup-content">
-            <img src="../static/img/update4.png" alt="">
+            <div class="honor-popup-frame"><img src="../static/img/update4.png" alt=""></div>
+        </div>
+    </div>
+
+    <!-- 弹窗5 -->
+    <div class="honor-popup" id="modal-overlay-5">
+        <div class="honor-popup-bg" onclick="closePopup('modal-overlay-5')"></div>
+        <div class="honor-popup-content">
+            <div class="honor-popup-frame"><img src="../static/img/update5.png" alt=""></div>
         </div>
     </div>
 
     <!-- 二维码弹窗 -->
     <div class="qr_popup" id="qr-popup">
-        <div class="qr_popup_bg" onclick="closeQrPopup()"></div>
+        <div class="qr_popup_bg" onclick="closePopup('qr-popup')"></div>
         <div class="qr_popup_content">
-            <img src="../static/img/qr码.png" alt="">
+            <img src="../static/img/qr.png" alt="">
         </div>
     </div>
 
     <script src="../static/js/dots.js"></script>
-    <script src="../static/js/timeline.js"></script>
-    <script src="../static/js/qr.js"></script>
+    <script src="../static/js/popup.js"></script>
 </body>
 </html>

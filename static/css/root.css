@@ -1,73 +1,65 @@
-/* ========== 全局重置 ========== */
-* { margin:0; padding:0; box-sizing: border-box; }
+/* 全局重置 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ========== 自定义字体 ========== */
-@font-face {
-    font-family: "kuzhu";
-    src: url(../fonts/酷站快乐体.ttf);
+/* 主题色 */
+:root {
+    --purple: #747bff;
+    --cyan: #70ffcd;
+    --blue: #38bdf8;
+    --card: #142032;
 }
 
+/* 自定义字体 */
 @font-face {
     font-family: "simkai";
     src: url(../fonts/simkai.ttf);
 }
 
-@font-face {
-    font-family: "pacifico";
-    src: url(../fonts/Pacifico-Regular.ttf);
-}
-
-/* ========== 页面主体 ========== */
+/* 页面主体：字号/间距随视口宽度自适应，宽屏维持原尺寸 */
 body {
+    min-height: 100vh;
+    padding: 88px clamp(16px, 4vw, 40px) 40px;
     background-color: #000C20;
     background-image:
-        linear-gradient(rgba(65, 209, 255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(65, 209, 255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(65, 209, 255, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(65, 209, 255, .04) 1px, transparent 1px);
     background-size: 15px 15px;
     background-position: center;
-    background-repeat: repeat;
-    min-height: 100vh;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 80px;
-    font-weight: bold;
-    text-align: left;
-    line-height:1.4;
-    padding: 72px 40px 40px;
+    color: #fff;
+    font: bold clamp(36px, 6.5vw, 80px)/1.4 sans-serif;
 }
 
-/* ========== 字体类（共用） ========== */
-.font_kuzhu    { font-family: kuzhu; }
-.font_simkai   { font-family: simkai; }
-.font_pacifico { font-family: pacifico; }
+/* 图片默认不超出容器 */
+img { max-width: 100%; }
 
-/* ========== 文字颜色类（共用） ========== */
-.text_purple { color: #747bff; }
-.text_cyan   { color: #70ffcd; }
-.text_blue   { color: #38bdf8; }
-.text_white  { color: #ffffff; }
+/* 通用：字体 / 颜色 / 发光 */
+.font_simkai { font-family: simkai, sans-serif; }
 
-/* ========== 发光特效类（共用） ========== */
-.glow_purple { text-shadow: 0 0 20px #747bff; }
-.glow_cyan   { text-shadow: 0 0 20px #70ffcd; }
-.glow_blue   { text-shadow: 0 0 20px #38bdf8; }
+.text_purple { color: var(--purple); }
+.text_cyan   { color: var(--cyan); }
+.text_blue   { color: var(--blue); }
+.text_white  { color: #fff; }
 
-/* ========== 背景圆点 ========== */
+.glow_purple { text-shadow: 0 0 20px var(--purple); }
+.glow_cyan   { text-shadow: 0 0 20px var(--cyan); }
+.glow_blue   { text-shadow: 0 0 20px var(--blue); }
+
+/* 背景圆点 */
 .dots_container {
     position: fixed;
-    top: 0; left:0;
-    width: 100%; height: 100%;
+    inset: 0;
     z-index: 0;
-    pointer-events: none;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .bg_dot {
     position: absolute;
     width: 5px;
     height: 5px;
-    background: radial-gradient(circle, #4AA9FF 0%, rgba(74, 169, 255, 0) 70%);
     border-radius: 50%;
-    opacity:0.7;
+    background: radial-gradient(circle, #4AA9FF 0%, rgba(74, 169, 255, 0) 70%);
+    opacity: .7;
     pointer-events: none;
+    will-change: transform;
 }

@@ -1,62 +1,53 @@
-@font-face {
-    font-family: "title";
-    src: url(../fonts/Pacifico-Regular.ttf);
-}
-
-body{
-    padding: 0;
-    text-align: center;
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
 }
 
-body img {
-    position: relative;
-    z-index: 1;
-    width: 200px;
-    border-radius: 50%;
-    margin-bottom: 30px;
-}
-
-body h1 {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    font-size: 8rem;
-    letter-spacing: 0.1em;
-}
-
-body h2 {
-    position: relative;
-    z-index: 1;
-    margin: 15px 0 0;
-    font-size: 2.5rem;
-    font-weight: normal;
-    opacity: 0.9;
-}
-
-.Pacifico-Regular {
-    font-family: "title";
-}
-
+/* 内容压在背景圆点之上 */
+body img,
+body h1,
+body h2,
 .home-btn {
     position: relative;
     z-index: 1;
+}
+
+body img {
+    width: clamp(110px, 20vw, 200px);
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+
+body h1 {
+    margin: 0;
+    font-size: clamp(4rem, 14vw, 8rem);
+    letter-spacing: .1em;
+}
+
+body h2 {
+    margin: 15px 0 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: normal;
+    opacity: .9;
+}
+
+.home-btn {
     margin-top: 30px;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    color: #fff;
+    padding: clamp(10px, 1.5vw, 12px) clamp(20px, 3vw, 30px);
     background: #142032;
     border-radius: 25px;
+    color: #fff;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background .2s, transform .2s;
 }
 
 .home-btn:hover {
-    background: rgba(255,255,255,0.14);
+    background: rgba(255, 255, 255, .14);
     transform: scale(1.05);
 }

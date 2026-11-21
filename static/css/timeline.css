@@ -1,4 +1,4 @@
-/* ========== 时间线页面 ========== */
+/* 时间线页面 */
 .main_content {
     display: flex;
     flex-direction: column;
@@ -8,115 +8,99 @@
 .timeline_section {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
-    max-width: 900px;
     width: 100%;
+    max-width: 900px;
+    margin-bottom: clamp(24px, 4vw, 40px);
 }
 
 .timeline_title {
-    font-size: 20px;
-    font-weight: 800;
     margin-bottom: 16px;
-    color: #ffffff;
+    font-size: clamp(17px, 2.5vw, 20px);
+    font-weight: 800;
     text-align: center;
 }
 
 .timeline_list {
-    list-style: none;
-    padding-left: 8px;
     max-width: 500px;
     margin: 0 auto;
+    padding-left: 8px;
+    list-style: none;
 }
 
 .timeline_list li {
     position: relative;
     padding: 15px 0 0 15px;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-}
-
-.timeline_list li:first-child .timeline_dot {
-    background-color: #aaffcd;
+    border-left: 2px solid rgba(255, 255, 255, .2);
 }
 
 .timeline_dot {
+    position: absolute;
+    top: 22px;
+    left: -6px;
     width: 8px;
     height: 8px;
-    border-radius: 50%;
-    background-color: #ffffff;
+    background: #fff;
     border: 2px solid #fff;
-    position: absolute;
-    left: -6px;
-    top: 22px;
+    border-radius: 50%;
     transform: translateY(-50%);
 }
+
+.timeline_list li:first-child .timeline_dot { background-color: #aaffcd; }
 
 .timeline_text {
     display: flex;
     flex-direction: column;
-    transform: translateY(-10px);
-    font-size: 15px;
+    font-size: clamp(13px, 1.8vw, 15px);
     font-weight: normal;
-    transition: transform 0.25s ease;
+    transform: translateY(-10px);
+    transition: transform .25s;
 }
 
 .timeline_text div:last-child {
-    font-size: 12px;
-    opacity: 0.5;
     margin-top: 4px;
+    font-size: 12px;
+    opacity: .5;
 }
 
 .timeline_icons {
     position: absolute;
-    left: -110px;
     top: 4px;
+    left: -110px;
     display: flex;
     gap: 6px;
 }
 
-.timeline_icons.icon_right {
-    left: -60px;
-}
+.timeline_icons.icon_right { left: -60px; }
 
 .timeline_icon {
-    width: 45px;
-    height: 45px;
+    width: clamp(36px, 6vw, 45px);
+    height: clamp(36px, 6vw, 45px);
     border-radius: 3px;
 }
 
-/* ========== 更新记录卡片悬停放大（仅文字） ========== */
-.update_card {
-    cursor: pointer;
-}
+/* 更新记录：悬停放大文字 */
+.update_card { cursor: pointer; }
 
-.update_card:hover .timeline_text {
-    transform: translateY(-10px) scale(1.04);
-}
+.update_card:hover .timeline_text { transform: translateY(-10px) scale(1.04); }
 
-/* ========== 弹窗（旧版风格） ========== */
+/* 图片弹窗 */
 .honor-popup {
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: 9999;
-    justify-content: center;
+    display: none;
     align-items: center;
+    justify-content: center;
 }
 
-.honor-popup.show {
-    display: flex;
-}
+.honor-popup.show { display: flex; }
 
 .honor-popup-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .honor-popup-content {
@@ -126,49 +110,55 @@
     align-items: center;
 }
 
+.honor-popup-frame {
+    padding: 24px;
+    background: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
 .honor-popup img {
-    max-width: 90%;
-    max-height: calc(100vh - 120px);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: block;
+    max-width: calc(100vw - 120px);
+    max-height: calc(100vh - 168px);
+    border-radius: 15px;
 }
 
 .honor-popup-btns {
     display: flex;
-    margin-top: 12px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: clamp(12px, 3vw, 24px);
+    margin-top: 12px;
 }
 
-.honor-popup-btn {
-    display: inline-block;
-    padding: 8px 24px;
-    background: #00a1d6;
-    color: #fff;
-    border-radius: 20px;
-    font-size: 14px;
-    text-decoration: none;
-    margin-right: 24px;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.honor-popup-btn:hover {
-    background: #008fc7;
-    transform: scale(1.05);
-}
-
+.honor-popup-btn,
 .honor-popup-btn-gh {
-    display: inline-block;
-    padding: 8px 24px;
-    background: #24292e;
-    color: #fff;
+    padding: 8px clamp(14px, 3vw, 24px);
     border-radius: 20px;
-    font-size: 14px;
+    color: #fff;
+    font-size: clamp(13px, 1.8vw, 14px);
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background .2s, transform .2s;
 }
 
-.honor-popup-btn-gh:hover {
-    background: #444d56;
-    transform: scale(1.05);
+.honor-popup-btn { background: #00a1d6; }
+.honor-popup-btn:hover { background: #008fc7; transform: scale(1.05); }
+
+.honor-popup-btn-gh { background: #24292e; }
+.honor-popup-btn-gh:hover { background: #444d56; transform: scale(1.05); }
+
+/* 窄屏：图标改为流式居中排版，避免负 left 定位把图标推出屏幕 */
+@media (max-width: 640px) {
+    .timeline_icons,
+    .timeline_icons.icon_right {
+        position: static;
+        justify-content: flex-start;
+        margin: 0 0 6px 0;
+    }
+    .timeline_text {
+        align-items: flex-start;
+        transform: none;
+    }
+    .update_card:hover .timeline_text { transform: scale(1.03); }
 }
