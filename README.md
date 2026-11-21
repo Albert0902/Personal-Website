@@ -13,7 +13,3 @@
 ## Information
 
 Website URL: https://albert-site.pages.dev/html/
-
-## License
-
-I allow anyone to modify my website to use as their own personal website or another website, but commercial use is prohibited, and credit must be given to this website.
