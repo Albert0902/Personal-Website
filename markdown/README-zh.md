@@ -13,3 +13,13 @@
 ## 相关信息
 
 网站部署网址：https://albert-site.pages.dev/html/
+
+## 开源相关
+
+### 开源说明
+
+代码中含有中文注释，供大家阅读和理解。
+
+### 开源许可
+
+开源协议见<a href="../LICENSE">LICENSE</a> *(Apache协议)*

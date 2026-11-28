@@ -10,7 +10,7 @@ function closePopup(id) {
 }
 
 /* 点击弹窗任意位置关闭 */
-document.querySelectorAll('.honor-popup, .qr_popup').forEach(function (popup) {
+document.querySelectorAll('.qr_popup').forEach(function (popup) {
     popup.addEventListener('click', function () {
         closePopup(popup.id);
     });

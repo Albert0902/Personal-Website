@@ -13,3 +13,13 @@
 ## 相關資訊
 
 網站部署網址：https://albert-site.pages.dev/html/
+
+## 開源相關
+
+### 開源說明
+
+程式碼中含有中文註解，供大家閱讀和理解。
+
+### 開源許可
+
+開源協議見<a href="../LICENSE">LICENSE</a> *(Apache協議)*

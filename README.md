@@ -13,3 +13,13 @@
 ## Information
 
 Website URL: https://albert-site.pages.dev/html/
+
+## Open Source
+
+### About
+
+The code contains Chinese comments for everyone to read and understand.
+
+### License
+
+The open source license is in <a href="LICENSE">LICENSE</a> *(Apache License)*

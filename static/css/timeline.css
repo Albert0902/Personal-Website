@@ -70,88 +70,15 @@
     gap: 6px;
 }
 
-.timeline_icons.icon_right { left: -60px; }
-
 .timeline_icon {
     width: clamp(36px, 6vw, 45px);
     height: clamp(36px, 6vw, 45px);
     border-radius: 3px;
 }
 
-/* 更新记录：悬停放大文字 */
-.update_card { cursor: pointer; }
-
-.update_card:hover .timeline_text { transform: translateY(-10px) scale(1.04); }
-
-/* 图片弹窗 */
-.honor-popup {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.honor-popup.show { display: flex; }
-
-.honor-popup-bg {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, .7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-.honor-popup-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.honor-popup-frame {
-    padding: 24px;
-    background: var(--card);
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-}
-
-.honor-popup img {
-    display: block;
-    max-width: calc(100vw - 120px);
-    max-height: calc(100vh - 168px);
-    border-radius: 15px;
-}
-
-.honor-popup-btns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: clamp(12px, 3vw, 24px);
-    margin-top: 12px;
-}
-
-.honor-popup-btn,
-.honor-popup-btn-gh {
-    padding: 8px clamp(14px, 3vw, 24px);
-    border-radius: 20px;
-    color: #fff;
-    font-size: clamp(13px, 1.8vw, 14px);
-    text-decoration: none;
-    transition: background .2s, transform .2s;
-}
-
-.honor-popup-btn { background: #00a1d6; }
-.honor-popup-btn:hover { background: #008fc7; transform: scale(1.05); }
-
-.honor-popup-btn-gh { background: #24292e; }
-.honor-popup-btn-gh:hover { background: #444d56; transform: scale(1.05); }
-
 /* 窄屏：图标改为流式居中排版，避免负 left 定位把图标推出屏幕 */
 @media (max-width: 640px) {
-    .timeline_icons,
-    .timeline_icons.icon_right {
+    .timeline_icons {
         position: static;
         justify-content: flex-start;
         margin: 0 0 6px 0;
@@ -160,5 +87,4 @@
         align-items: flex-start;
         transform: none;
     }
-    .update_card:hover .timeline_text { transform: scale(1.03); }
 }
